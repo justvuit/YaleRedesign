@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Yale Art</title>
+<link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed|Slabo+27px" rel="stylesheet">
+<style>
+
+.title {
+	color: darkblue;
+	font-size: 3vw;
+	padding-left: 30px;
+	padding-top: 50px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.subtitle {
+	color: darkblue;
+	font-size: 1vw;
+	padding-left: 30px;
+	text-align: left;
+}
+
+.pagetitle {
+	color: darkblue;
+	font-size: 3vw;
+	padding-left: 30px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.pagewriting {
+	color: black;
+	font-size: 2vw;
+	padding-left: 30px;
+	text-align: left;
+}
+
+img {
+    float: left;
+		width: 90px;
+		height: 90px;
+		padding-left: 30px;
+}
+
+body {
+	margin: 0;
+	font-family: AppleGothic, sans-serif;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 5fr 10fr;
+	background: url("gallery3.jpg");
+}
+
+.dropbtn {
+		background-color: darkblue;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+}
+.dropbtn:hover, .dropbtn:focus {
+		background-color: blue;
+}
+.dropdown {
+		grid-column: 3;
+		grid-row: 1;
+		display: inline-block;
+		float: right;
+		padding-right: 50px;
+}
+.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: lightgray;
+		min-width: 160px;
+		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+}
+.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+}
+.dropdown a:hover {background-color: #f1f1f1}
+.show {display:block;}
+
+.nav_bar {
+	display: none;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	background-color: white;
+}
+li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 25px;
+	font-size: 2vw;
+}
+/* Change the link color on hover */
+li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+.top_bar{
+	grid-column: span 2;
+	grid-row: span 1;
+}
+
+.banner {
+	background-color: #99bbff;
+	grid-column: span 4;
+	grid-row: 1;
+}
+
+.banners {
+	grid-column: span 4;
+	grid-row: 2;
+}
+
+@media screen and (min-width: 800px) {
+	.title {
+		font-size: 3vw;
+	}
+
+	.pagetitle {
+		font-size: 2vw;
+	}
+
+	img {
+			width: 170px;
+			height:170px;
+	}
+
+	body {
+		display: grid;
+		grid-template-columns: 3fr 13fr;
+		grid-template-rows: 3fr 10fr;
+		background: url("gallery2.jpeg");
+	}
+
+	.content{
+		margin: 10px;
+		display: grid;
+		grid-template-columns: 1;
+		grid-template-rows: 20px 10px 10px 250px 20px 20px 20px 20px;
+	}
+
+	.top_bar{
+		grid-column: span 2;
+		grid-row: span 1;
+	}
+
+	.dropdown{
+		display: none;
+	}
+
+	.nav_bar{
+		display: block;
+		grid-column: span 1;
+	}
+
+	.banner {
+		background-color: #99bbff;
+		grid-column: span 8;
+		grid-row: 4 / span 6;
+	}
+
+	.banners {
+		grid-column: span 8;
+		grid-row: 10 / span 3;
+	}
+
+}
+
+@media screen and (min-width: 1600px) {
+	body {
+		background: url("gallery.jpg");
+	}
+	.title {
+		padding-left: 70px;
+		font-size: 4vw;
+	}
+	.subtitle {
+		padding-left: 70px;
+	}
+}
+
+</style>
+</head>
+
+<body>
+	<div class="top_bar">
+		<p class="title">Yale School of Art</p>
+		<p class="subtitle"> 1156 Chapel Street, POB 208339 </br>
+New Haven, Connecticut, 06520-8339 </br>
+(203) 432-2600</p>
+	</div>
+	<div class="dropdown">
+		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="#home">Home</a>
+			<a href="#about">Events</a>
+			<a href="#contact">Courses</a>
+			<a href="#contact">Facilities</a>
+			<a href="#contact">Students</a>
+			<a href="#contact">Faculty</a>
+			<a href="#contact">Admission</a>
+			<a href="#contact">Contact</a>
+		</div>
+	</div>
+	<div class="nav_bar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#news">Events</a></li>
+			<li><a href="#contact">Courses</a></li>
+			<li><a href="#about">Facilities</a></li>
+			<li><a href="#home">Students</a></li>
+			<li><a href="#news">Faculty</a></li>
+			<li><a href="#contact">Admission</a></li>
+			<li><a href="#about">Contact</a></li>
+		</ul>
+	</div>
+	<div class = content>
+		<div class = "banner">
+			<p class="pagetitle">Faculty</p>
+			<p><img src="woman.jpg" alt="woman">
+			<div class = "pagewriting">
+				Ms. Alexandra graduated from the Rhode Island School of Design in 1990 with a B.F.A.
+				in graphic design. She currently mans her own mobile creative services shop, Employee Number 1.
+				Ms. Alexandra’s work has been included in the 100 Show, the Art Directors Club, Creativity 30,
+				AIGA 365, and the BDA Design Awards and featured in ID, Metropolis, Eye, Bust, Print, and Dwell magazines.
+			</div>
+		</div>
+		<div class = "banners">
+			<p class="pagetitle">Academic Leadership</p>
+			<div class = "pagewriting">
+				Ms. Asper received her B.F.A. from the Maryland Institute College of Art in 2002 and her M.F.A.
+				from Yale University in 2004. She also attended Skowhegan School of Painting and Sculpture in the summer of 2006.
+				Her work has been shown internationally, with a recent two-person show at APFLab in New York and a recent curatorial
+				project at the Suburban in Chicago. In addition to having been reviewed in publications.
+			</div>
+		</div>
+	</div>
+
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+	</script>
+</body>
+</html>
